@@ -27,7 +27,7 @@
 
 Проект для соревнования kaggle https://www.kaggle.com/competitions/made-2022-leto-asr
 
-Подробное описание решения можно посмотреть здесь 
+Подробное описание решения можно посмотреть здесь https://github.com/mivankin/quartznet5x5/blob/main/notebooks/solution.pdf
 
 Логирование процесса обучения:
 https://wandb.ai/mivankin/made-asr-kaggle-augmentations_time_100
