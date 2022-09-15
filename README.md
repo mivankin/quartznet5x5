@@ -25,6 +25,13 @@
 
 <br>
 
+Проект для соревнования kaggle https://www.kaggle.com/competitions/made-2022-leto-asr
+
+Подробное описание решения можно посмотреть здесь 
+
+Логирование процесса обучения:
+https://wandb.ai/mivankin/made-asr-kaggle-augmentations_time_100
+
 ## Project Structure
 
 The directory structure of new project looks like this:

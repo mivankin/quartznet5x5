@@ -1,12 +1,5 @@
 import pyrootutils
 
-root = pyrootutils.setup_root(
-    search_from=__file__,
-    indicator=[".git", "pyproject.toml"],
-    pythonpath=True,
-    dotenv=True,
-)
-
 from typing import List, Optional, Tuple
 
 import hydra
@@ -17,8 +10,14 @@ from pytorch_lightning.loggers import LightningLoggerBase
 
 from src import utils
 
-log = utils.get_pylogger(__name__)
+root = pyrootutils.setup_root(
+    search_from=__file__,
+    indicator=[".git", "pyproject.toml"],
+    pythonpath=True,
+    dotenv=True,
+)
 
+log = utils.get_pylogger(__name__)
 
 @utils.task_wrapper
 def train(cfg: DictConfig) -> Tuple[dict, dict]:

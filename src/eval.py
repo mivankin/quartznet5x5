@@ -1,4 +1,12 @@
 import pyrootutils
+import hydra
+from typing import List, Tuple
+from omegaconf import DictConfig
+from pytorch_lightning import LightningDataModule, LightningModule, Trainer
+from pytorch_lightning.loggers import LightningLoggerBase
+
+from src import utils
+
 
 root = pyrootutils.setup_root(
     search_from=__file__,
@@ -6,16 +14,6 @@ root = pyrootutils.setup_root(
     pythonpath=True,
     dotenv=True,
 )
-
-
-from typing import List, Tuple
-
-import hydra
-from omegaconf import DictConfig
-from pytorch_lightning import LightningDataModule, LightningModule, Trainer
-from pytorch_lightning.loggers import LightningLoggerBase
-
-from src import utils
 
 log = utils.get_pylogger(__name__)
 

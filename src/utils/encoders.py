@@ -3,6 +3,7 @@ from typing import Dict, Any
 
 LETTERS = '- абвгдежзийклмнопрстуфхцчшщъыьэюя'
 
+
 class GreedyCTCDecoder(torch.nn.Module):
     def __init__(self, labels: Dict, blank: int = 0):
         super().__init__()
@@ -23,13 +24,12 @@ class GreedyCTCDecoder(torch.nn.Module):
         joined = "".join([self.labels[i.item()] for i in indices])
         return joined.replace("|", " ").strip().split()
 
+
 class TextEncDec:
-    def __init__(self, 
-        letters: str = LETTERS
-        ):
+    def __init__(self, letters: str = LETTERS):
         
         self.token_to_id = {
-            letters[i] : i for i, _ in enumerate(letters)
+            letters[i]: i for i, _ in enumerate(letters)
         }
         self.id_to_token = {
             i : letters[i] for i, _ in enumerate(letters)
