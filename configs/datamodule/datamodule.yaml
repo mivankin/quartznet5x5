@@ -1,0 +1,17 @@
+_target_: src.datamodules.datamodule.ASRDataModule
+#data_dir: ${paths.data_dir}
+train_data_path: ${paths.data_dir}/train_sorted.csv
+test_data_path: ${paths.data_dir}/test_sorted.csv
+val_data_path: ${paths.data_dir}/val_sorted.csv
+train_test_split: [0.85, 0.15, 0.05]
+batch_size: 32
+sample_size: 64
+n_mels: 64
+sample_rate: 16000
+n_fft: 1024
+n_hop: 256
+freq_mask_param: 15
+time_mask_param: 30
+num_workers: 0
+pin_memory: False
+data_shuffle: bool = True

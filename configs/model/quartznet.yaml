@@ -1,0 +1,7 @@
+_target_: src.models.module.QuartznetModule
+
+net:
+  _target_: src.models.components.quartznet_5x5.QuartzNet
+  n_mels: 64
+  num_classes: 34
+
